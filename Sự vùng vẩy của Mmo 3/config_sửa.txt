@@ -1,0 +1,48 @@
+# ==============================================================================
+# 6. CẤU HÌNH HÀM MỤC TIÊU (OBJECTIVE FUNCTION)
+# ==============================================================================
+# Thành phần chính để tối ưu (chi phí di chuyển).
+# Giá trị hợp lệ: "DISTANCE", "TRAVEL_TIME"
+PRIMARY_OBJECTIVE = "DISTANCE" 
+
+# Bật/tắt thành phần tối ưu hóa số lượng xe.
+OPTIMIZE_VEHICLE_COUNT = False
+
+# Trọng số (chi phí phạt) cho các thành phần trong hàm mục tiêu.
+# Các giá trị này không có tác dụng khi OPTIMIZE_VEHICLE_COUNT = False,
+# nhưng để chúng ở đây cho rõ ràng.
+WEIGHT_PRIMARY = 1.0
+WEIGHT_FE_VEHICLE = 1000.0
+WEIGHT_SE_VEHICLE = 200.0
+
+# ==============================================================================
+# 6. CẤU HÌNH HÀM MỤC TIÊU (OBJECTIVE FUNCTION)
+# ==============================================================================
+# Thành phần chính để tối ưu (chi phí di chuyển).
+PRIMARY_OBJECTIVE = "TRAVEL_TIME" 
+
+# Bật/tắt thành phần tối ưu hóa số lượng xe.
+OPTIMIZE_VEHICLE_COUNT = False
+
+# Trọng số
+WEIGHT_PRIMARY = 1.0
+WEIGHT_FE_VEHICLE = 1000.0
+WEIGHT_SE_VEHICLE = 200.0
+
+# ==============================================================================
+# 6. CẤU HÌNH HÀM MỤC TIÊU (OBJECTIVE FUNCTION)
+# ==============================================================================
+# Thành phần chính để tối ưu (chi phí di chuyển).
+PRIMARY_OBJECTIVE = "DISTANCE" # Hoặc "TRAVEL_TIME"
+
+# Bật/tắt thành phần tối ưu hóa số lượng xe.
+OPTIMIZE_VEHICLE_COUNT = True
+
+# Trọng số (chi phí phạt) cho các thành phần trong hàm mục tiêu.
+# Chọn trọng số tương ứng với chi phí thực tế.
+# Ví dụ: nếu chi phí cố định cho 1 xe FE tương đương với 1000km di chuyển.
+WEIGHT_PRIMARY = 1.0
+WEIGHT_FE_VEHICLE = 1000.0 
+WEIGHT_SE_VEHICLE = 200.0
+
+Remove-Item -Path "results" -Recurse -Force lệnh xoá thư mục
